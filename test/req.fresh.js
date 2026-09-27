@@ -84,6 +84,7 @@ describe('req', function(){
       .send({ ids: ['a', 'b'] })
       .expect(200, 'false', done);
     })
+<<<<<<< HEAD
 
     it('should ignore "If-Modified-Since" when "If-None-Match" is present', function(done) {
       var app = express();
@@ -104,5 +105,7 @@ describe('req', function(){
         .expect(304, done);
     })
 
+=======
+>>>>>>> releasedd
   })
 })

@@ -55,7 +55,22 @@ describe('app.router', function () {
           .expect(200, done)
       })
 
+<<<<<<< HEAD
       it('should reject numbers for app.' + method, function () {
+=======
+      it('should not support ' + method.toUpperCase() + ' without a path', function () {
+        if (method === 'get' || (method === 'query' && shouldSkipQuery(process.versions.node))) {
+          this.skip();
+        }
+        var app = express();
+
+        assert.throws(function () {
+          app[method](function (req, res) { });
+        });
+      });
+
+      it('should reject numbers for app.' + method, function(){
+>>>>>>> releasedd
         var app = express();
         assert.throws(app[method].bind(app, '/', 3), /argument handler must be a function/);
       })

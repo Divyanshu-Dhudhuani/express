@@ -32,7 +32,11 @@ app.param(['to', 'from'], function(req, res, next, num, name){
 // Load user by id
 
 app.param('user', function(req, res, next, id){
+<<<<<<< HEAD
   req.user = users[id]
+=======
+  req.user = users[id];
+>>>>>>> releasedd
   if (req.user) {
     next();
   } else {
